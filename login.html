@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Quicksand font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Login</title>
+  <style>
+    :root {
+      /* Colores */
+      --dark: #232830;
+      --black: #000000;
+      --white: #FFFFFF;
+      --hospital-green: #ACD9B2;
+      --very-light-pink: #C7C7C7;
+      --text-input-field: #F7F7F7;
+      /* Fuentes */
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
+    }
+
+    body{
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .login {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .form-container {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      width: 339px;
+    }
+
+    .logo {
+      display: none;
+      justify-self: center;
+      margin-bottom: 48px;
+      height: 43px;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form a {
+      text-decoration: none;
+      color: var(--hospital-green);
+      font-weight: 500;
+      text-align: center;
+      font-size: var(--sm);
+      margin-bottom:60px;
+    }
+
+    .label {
+      margin-bottom: 6px;
+      font-weight: 700;
+      font-size: var(--sm);
+    }
+
+    .input {
+      margin-bottom: 24px;
+      border:1px solid var(--text-input-field);
+      border-radius: 10px;
+      padding-left: 8px;
+      font-size: var(--md);
+      background-color: var(--text-input-field);
+      height: 42px;
+    }
+
+    .primary-btn {
+      background-color: var(--hospital-green);
+      border-radius: 8px;
+      border: none;
+      color: var(--white);
+      width: 100%;
+      cursor: pointer;
+      font-size: var(--lg);
+      font-weight: 500;
+      height: 59px;
+    }
+
+    .login-btn {
+      margin-top: 14px;
+      margin-bottom: 30px;
+    }
+
+    .secondary-btn {
+      background-color: var(--white);
+      color: var(--hospital-green);
+      border-radius: 8px;
+      border: 1px solid var(--hospital-green);
+      cursor: pointer;
+      font-size: var(--lg);
+      font-weight: 500;
+      height: 59px;
+      width: inherit; 
+    }
+
+    .signup-btn {
+      position: relative;
+      bottom: 0px;
+    }
+
+    @media (max-width: 640px) {
+      .logo {
+        display: block;
+      }
+
+      .secondary-btn {
+        position: absolute;
+        bottom: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="login">
+    <div class="form-container" action="/">
+      <img class="logo" src="./assets/logos/logo_yard_sale.svg" alt="logo" title="logo">
+      <form action="/" class="form">
+        <label class="label" for="email">Email address</label>
+        <input class="input input-password" type="email" id="email" placeholder="camilayokoo@gmail.com">
+        <label class="label" for="password">Password</label>
+        <input class="input input-password" type="password" id="password" placeholder="*********">
+        <input class="primary-btn login-btn" type="button" value="Login">
+        <a href="/">Forgot my password</a>
+      </form>
+      <button class="secondary-btn signup-btn">Sign up</button>
+    </div>
+  </section>
+</body>
+</html>

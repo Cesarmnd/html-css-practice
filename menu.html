@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Quicksand font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Menu</title>
+  <style>
+    :root {
+      /* Colores */
+      --dark: #232830;
+      --black: #000000;
+      --white: #FFFFFF;
+      --hospital-green: #ACD9B2;
+      --very-light-pink: #C7C7C7;
+      --text-input-field: #F7F7F7;
+      --shadow: #00000026;
+      /* Fuentes */
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
+    }
+
+    body{
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .desktop-menu {
+      width: 153px;
+      height: 190px;
+      box-shadow: 0px 0px 6px 0px var(--shadow);
+      border-radius: 5px;
+      padding:25px;
+      box-sizing: border-box;
+    }
+
+    .desktop-menu ul {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .desktop-menu ul li {
+      width: 100%;
+      list-style: none;
+      text-align: right;
+    }
+    
+    .link {
+      text-decoration: none;
+      font-weight: 700;
+      color: inherit;
+    }
+
+    .desktop-menu ul li:last-child {
+      border-top: 1px solid var(--very-light-pink);
+      color: var(--hospital-green);
+      font-size: var(--sm);
+      padding-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="desktop-menu">
+    <ul>
+      <li>
+        <a class="link" href="">My orders</a>
+      </li>
+      <li>
+        <a class="link" href="">My account</a>
+      </li>
+      <li>
+        <a class="link" href="">Sign out</a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

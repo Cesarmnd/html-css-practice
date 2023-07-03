@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Quicksand font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Navbar</title>
+  <style>
+    :root {
+      /* Colores */
+      --dark: #232830;
+      --black: #000000;
+      --white: #FFFFFF;
+      --hospital-green: #ACD9B2;
+      --very-light-pink: #C7C7C7;
+      --text-input-field: #F7F7F7;
+      --shadow: #00000026;
+      /* Fuentes */
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
+    }
+
+    body{
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    nav {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding: 13px 45px;
+      box-sizing: border-box;
+      box-shadow: 0px 2px 4px 0px var(--shadow);
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .logo {
+      width: 144px;
+    }
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-left li a {
+      text-decoration: none;
+      color: var(--very-light-pink);
+      border: 1px solid var(--white);
+      border-radius: 10px;
+      font-weight: 700;
+      padding: 5px 14px;
+      margin-left: 20px;
+    }
+
+    .navbar-left li a:hover {
+      color: var(--hospital-green);
+      border: 1px solid var(--hospital-green);
+    }
+
+    .navbar-left ul,
+    .navbar-right ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-email img {
+      margin-left: 6px;
+    }
+
+    .rotate_arrow {
+      transform: rotate(90deg);
+    }
+
+    .navbar-shopping-cart{
+      position: relative;
+      width: 29.5px;
+      height: 27px;  
+      margin-left: 20px;
+    }
+
+    .navbar-shopping-cart img {
+      width: 29.5px;
+      height: 27px; 
+    }
+
+    .navbar-shopping-cart div {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: var(--hospital-green);
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;   
+      display: flex;
+      place-content: center;
+      font-size: 11px;   
+      font-weight: 500;
+    }
+
+    @media (max-width: 640px) {
+      nav {
+        padding: 13px 18px;
+
+      }
+      .menu {
+        display: block;
+      }
+
+      .navbar-left ul {
+        display: none;
+      }
+
+      .navbar-email {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <img class="menu" src="./assets/icons/icon_menu.svg" alt="menu">
+
+    <div class="navbar-left">
+      <img class="log" src="./assets/logos/logo_yard_sale.svg" alt="logo">
+      <ul>
+        <li>
+          <a href="">All</a>
+        </li>
+        <li>
+          <a href="">Clothes</a>
+        </li>
+        <li>
+          <a href="">Electronics</a>
+        </li>
+        <li>
+          <a href="">Furniture</a>
+        </li>
+        <li>
+          <a href="">Toys</a>
+        </li>
+        <li>
+          <a href="">Others</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="navbar-right">
+      <ul>
+        <li class="navbar-email">
+          camilayokoo@gmail.com.pe 
+          <img class="rotate_arrow" src="./assets/icons/flechita.svg" alt="arrow">
+        </li>
+        <li class="navbar-shopping-cart">
+          <img src="./assets/icons/icon_shopping_cart.svg" alt="shopping cart">
+          <div>10</div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</body>
+</html>
